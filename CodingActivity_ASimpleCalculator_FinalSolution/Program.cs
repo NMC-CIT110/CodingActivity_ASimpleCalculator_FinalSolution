@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodingActivity_ASimpleCalculator_FinalSolution
+namespace CodingActivity_ASimpleCalculator_StarterSolution
 {
     class Program
     {
@@ -16,8 +16,8 @@ namespace CodingActivity_ASimpleCalculator_FinalSolution
         //    two integers as user input and performs a basic operation.
         // Application Type: Console
         // Author: Velis, John
-        // Dated Created: (current date)
-        // Last Modified: 8/18/2016
+        // Dated Created: 8/18/2016
+        // Last Modified: 
         //
         // **************************************************
 
@@ -38,11 +38,11 @@ namespace CodingActivity_ASimpleCalculator_FinalSolution
             //  application screen - welcome
             //
             Console.WriteLine();
-            Console.WriteLine("Welcome to A Simple Calculator");
-            Console.WriteLine();
-            Console.WriteLine("You will be prompted for two integers and a mathematical");
-            Console.WriteLine("operation. The program will then output the answer.");
-            Console.WriteLine();
+
+            //
+            // INSERT CODE
+            //
+
             Console.WriteLine("Press any key to continue.");
             Console.ReadKey();
 
@@ -53,28 +53,28 @@ namespace CodingActivity_ASimpleCalculator_FinalSolution
             while (!quit)
             {
                 //
-                // application screen - get user responses
+                // application screen - get numbers from users
                 //
-                Console.Clear();
-                Console.WriteLine();
-                Console.WriteLine("A Simple Calculator");
-                Console.WriteLine();
+
+                //
+                // INSERT CODE
+                //
 
                 //
                 // get the first number and parse it
                 //
-                Console.WriteLine();
-                Console.Write("Enter the first number: ");
-                userResponse = Console.ReadLine();
-                num1 = int.Parse(userResponse);
+
+                //
+                // INSERT CODE
+                //
 
                 //
                 // get the second number and parse it
                 //
-                Console.WriteLine();
-                Console.Write("Enter the second number: ");
-                userResponse = Console.ReadLine();
-                num2 = int.Parse(userResponse);
+
+                //
+                // INSERT CODE
+                //
 
                 //
                 // get the operation with valid response
@@ -83,54 +83,43 @@ namespace CodingActivity_ASimpleCalculator_FinalSolution
                 while (!validResponse)
                 {
                     Console.WriteLine();
-                    Console.WriteLine("ADD, SUBTRACT, MULTIPLY, DIVIDE");
+                    Console.WriteLine("ADD");
                     Console.WriteLine("Enter one of the operations above:");
                     userResponse = Console.ReadLine();
                     operation = userResponse.ToUpper();
 
                     if (operation == "ADD")
                     {
-                        answer = num1 + num2;
                         validResponse = true;
                     }
-                    else if (operation == "SUBTRACT")
-                    {
-                        answer = num1 - num2;
-                        validResponse = true;
-                    }
-                    else if (operation == "MULTIPLY")
-                    {
-                        answer = num1 * num2;
-                        validResponse = true;
-                    }
-                    else if (operation == "DIVIDE")
-                    {
-                        answer = (double)num1 / num2; // cast num1 to double to force non-integer operation
-                        validResponse = true;
-                    }
+                    //
+                    // user did not provide a valid menu option
                     else
                     {
-                        Console.WriteLine("It appears that you did not enter a valid operation.");
-                        Console.WriteLine("Please try again.");
-                        Console.WriteLine();
-                        Console.WriteLine("Press any key to continue.");
-                        Console.ReadKey();
+
+                        //
+                        // INSERT CODE
+                        //
+
                     }
                 }
 
                 //
                 // application screen - display answer
                 //
-                Console.Clear();
-                Console.WriteLine();
-                Console.WriteLine("A Simple Calculator");
-                Console.WriteLine();
 
-                Console.WriteLine("Number 1: {0}", num1);
-                Console.WriteLine("Number 2: {0}", num2);
-                Console.WriteLine("Operation: {0}", operation);
-                Console.WriteLine("Answer: {0:0.00}", answer); // display rounded to hundredths
+                //
+                // INSERT CODE
+                //
 
+                //
+                // Student - echo user numbers and answer
+                //
+
+                //
+                // INSERT CODE
+                //
+                
                 Console.WriteLine();
                 Console.WriteLine("Press any key to continue.");
                 Console.ReadKey();
@@ -144,50 +133,39 @@ namespace CodingActivity_ASimpleCalculator_FinalSolution
                     //
                     // application screen - prompt user for another calculation
                     //
-                    Console.Clear();
-                    Console.WriteLine();
-                    Console.WriteLine("A Simple Calculator");
-                    Console.WriteLine();
 
-                    Console.Write("Would you like to perform another calculation (YES or NO)?");
-                    userResponse = Console.ReadLine().ToUpper();
-
+                    userResponse = Console.ReadLine();
                     if (userResponse == "YES")
                     {
-                        validResponse = true;
+
+                        //
+                        // INSERT CODE
+                        //
+
                     }
                     else if (userResponse == "NO")
                     {
-                        //
-                        // application screen - closing
-                        //
-                        Console.Clear();
-                        Console.WriteLine();
-                        Console.WriteLine("A Simple Calculator");
-                        Console.WriteLine();
-
-                        Console.WriteLine("Thank you for using our application.");
-
-                        Console.WriteLine();
-                        Console.WriteLine("Press any key to continue.");
-                        Console.ReadKey();
 
                         //
-                        // set quit flag
+                        // INSERT CODE
                         //
-                        quit = true;
-                        validResponse = true;
+
                     }
                     else
                     {
-                        Console.WriteLine("It appears that you did not enter a valid response.");
-                        Console.WriteLine("Please try again.");
-                        Console.WriteLine();
-                        Console.WriteLine("Press any key to continue.");
-                        Console.ReadKey();
+
+                        //
+                        // INSERT CODE
+                        //
+
                     }
                 }
             }
+
+            //
+            // INSERT CODE
+            //
+
         }
     }
 }
